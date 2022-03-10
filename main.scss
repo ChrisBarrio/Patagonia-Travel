@@ -946,3 +946,150 @@ footer{
     }
 }
 
+// Galaxy samsung
+@media (max-width: 361px){
+    html{
+        font-size: 45%;
+    }
+    
+    section{
+        padding: 0;
+    }
+    header{
+                opacity: 1;
+                & nav{
+                    top: 6rem; right: 100%;
+                    height: calc(100vh - 9.5rem);
+                    width: 100%;
+                    background-color:var(--white);
+                    position:absolute;
+                    transition: 2s;
+                    & ul{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        width: 100%;
+                        & li{
+                            padding: 4rem;
+                                & a{
+                                    font-size: var(--FontSize-xl);
+                                }
+                            }
+                        }
+                    &.active{
+                        right: 0;
+                    }    
+                }
+                & .iconos{
+                    display: flex;
+                    & .btn-menu{
+                        display: flex;
+                    }
+                }
+            }
+    .home{
+            padding-top: 9rem;
+            & .content{
+                position: absolute;
+                width: 50%;
+                padding: 0 8rem 0 0;
+                & h2{
+                    font-size: 2.5rem;
+                    & strong{
+                        color:var(--green);
+                    }
+                }
+                & p, a {
+                    display: none;
+                }
+                
+        
+            }   
+    }
+    .Recomendation{
+        display: block;
+        & img{
+            width: 100%;
+            padding:1rem;
+            clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+        }
+        & div{
+            width: 100%;
+            padding: 5rem;
+    
+            }
+    }
+    .Offer{
+            padding: 2rem;
+            & .Offer__container{
+                padding:  0 3rem;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                grid-gap: 3rem;
+                text-align: center;
+                    
+            }
+    }
+    .Blog{
+        display: block;
+        text-align: center;
+        & h2{
+            font-size:var(--h2);
+            padding: 3rem 0;
+        }
+        & .swiper {
+            width: 100%;
+            height: 100%;
+              
+            & .swiper-slide {
+                position: relative;
+                width: 30%;
+                height: 40rem;
+                padding: 2rem 5rem;
+                text-align: center;
+                font-size: 18px;
+                background: #fff;
+                /* Center slide text vertically */
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                justify-content: space-around;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                -webkit-align-items: center;
+                align-items: center;
+                & img{
+                    width: 100%;
+                    padding: 1rem;
+                }
+                & div{
+                    position: absolute;
+                    top: 30rem;
+                    background-color: var(--black);
+                    color: var(--white);
+                    padding: .5rem;
+                    border-radius: 1rem;
+                    & i{
+                        padding: 0 .3rem;
+                        font-size: var(--FontSize-m);
+                    } 
+                }
+                & h3{
+                    font-size: var(--FontSize-l);
+                    padding: 1rem;
+                    color: var(--green);
+                }
+                & p, a{
+                    display: none;
+                }
+                
+            }
+        }
+    }
+}
