@@ -357,6 +357,7 @@ header.active {
 .Featured_Products .swiper {
   width: 100%;
   height: 100%;
+  padding: 4rem 0;
 }
 
 .Featured_Products .swiper-slide {
@@ -395,6 +396,11 @@ header.active {
 
 .Featured_Products .swiper-slide i {
   color: var(--gold);
+}
+
+.Featured_Products .swiper-button-next,
+.Featured_Products .swiper-button-prev {
+  display: none;
 }
 
 .Popular_Packages {
@@ -1127,6 +1133,10 @@ footer .copy strong {
   .home .content p, .home .content a {
     display: none;
   }
+  .home .swiper-button-next,
+  .home .swiper-button-prev {
+    display: none;
+  }
   .Recomendation {
     display: block;
   }
@@ -1139,6 +1149,100 @@ footer .copy strong {
   .Recomendation div {
     width: 100%;
     padding: 5rem;
+  }
+  .Review {
+    display: block;
+    text-align: center;
+  }
+  .Review h2 {
+    font-size: var(--h2);
+    padding: 3rem 0;
+  }
+  .Review .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  .Review .swiper .swiper-slide {
+    width: 30%;
+    height: 30rem;
+    padding: 2rem 3rem;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .Review .swiper .swiper-slide p {
+    color: var(--black);
+    font-size: var(--FontSize-m);
+    line-height: 3rem;
+    background-color: var(--lightGreen);
+    border-radius: 1rem;
+    position: relative;
+    padding: 2rem 5rem;
+  }
+  .Review .swiper .swiper-slide p:after {
+    content: '';
+    top: 9rem;
+    left: 5.5rem;
+    width: 3rem;
+    height: 4rem;
+    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    background-color: var(--lightGreen);
+    position: absolute;
+  }
+  .Review .swiper .swiper-slide div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
+  }
+  .Review .swiper .swiper-slide div img {
+    width: 8rem;
+    border-radius: 50%;
+  }
+  .Review .swiper .swiper-slide div div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 50%;
+  }
+  .Review .swiper .swiper-slide div div h3 {
+    font-size: var(--FontSize-l);
+    padding: 1rem;
+  }
+  .Review .swiper .swiper-slide div div h4 {
+    color: var(--green);
+    background-color: transparent;
+  }
+  .Review .swiper .swiper-button-next,
+  .Review .swiper .swiper-button-prev {
+    display: none;
   }
   .Offer {
     padding: 2rem;
@@ -1211,5 +1315,31 @@ footer .copy strong {
   }
   .Blog .swiper .swiper-slide p, .Blog .swiper .swiper-slide a {
     display: none;
+  }
+  .Adds {
+    padding: 1rem 0;
+  }
+  .Adds .swiper {
+    width: 70%;
+  }
+  .Adds .swiper .swiper-slide {
+    padding: 12rem;
+    text-align: center;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 }

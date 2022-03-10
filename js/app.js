@@ -10,11 +10,15 @@ btn_nav.addEventListener('click',()=>{
 //-- Initialize Swiper 
 
 var swiper = new Swiper(".mySwiper", {
-  speed:2000,
+  speed:1000,
   loop: true,  
   navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
     },
   });
 
@@ -53,12 +57,16 @@ var swiper = new Swiper(".mySwiperFeatured", {
   slidesPerView: 3,
   spaceBetween: 30,
   slidesPerGroup: 3,
-  speed:2000,
+  speed:1000,
   loop: true,
   loopFillGroupWithBlank: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
   },
   // Responsive breakpoints
   breakpoints: {
@@ -90,12 +98,16 @@ var swiper = new Swiper(".mySwiperReview", {
   slidesPerView: 3,
   spaceBetween: 30,
   slidesPerGroup: 3,
-  speed:2000,
+  speed:1000,
   loop: true,
   loopFillGroupWithBlank: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
   },
   // Responsive breakpoints
   breakpoints: {
@@ -107,9 +119,9 @@ var swiper = new Swiper(".mySwiperReview", {
     },
     // when window width is >= 480px
     480: {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 40,
-      slidesPerGroup: 2,
+      slidesPerGroup: 1,
     },
     // when window width is >= 640px
     811: {
@@ -127,13 +139,14 @@ var swiper = new Swiper(".mySwiperBlog", {
   slidesPerView: 3,
   spaceBetween: 30,
   slidesPerGroup: 3,
-  speed:2000,
+  speed:1000,
   loop: true,
   loopFillGroupWithBlank: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  
   // Responsive breakpoints
   breakpoints: {
     // when window width is >= 320px
@@ -144,9 +157,9 @@ var swiper = new Swiper(".mySwiperBlog", {
     },
     // when window width is >= 480px
     480: {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 40,
-      slidesPerGroup: 2,
+      slidesPerGroup: 1,
     },
     // when window width is >= 640px
     811: {
@@ -164,11 +177,37 @@ var swiper = new Swiper(".mySwiperAdds", {
   slidesPerView: 4,
   spaceBetween: 30,
   slidesPerGroup: 4,
-  speed:2000,
+  speed:1000,
   loop: true,
   loopFillGroupWithBlank: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  // Responsive breakpoints
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      slidesPerGroup: 1,
+    },
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 1,
+      spaceBetween: 40,
+      slidesPerGroup: 1,
+    },
+    // when window width is >= 640px
+    811: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 3,
+    }
+    
+  } 
 });
