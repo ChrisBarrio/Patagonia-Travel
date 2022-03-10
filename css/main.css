@@ -398,11 +398,6 @@ header.active {
   color: var(--gold);
 }
 
-.Featured_Products .swiper-button-next,
-.Featured_Products .swiper-button-prev {
-  display: none;
-}
-
 .Popular_Packages {
   background-color: var(--lightGreen);
   display: block;
@@ -746,12 +741,11 @@ header.active {
 }
 
 .Adds .swiper {
-  width: 100%;
-  height: 100%;
+  width: 50%;
 }
 
 .Adds .swiper .swiper-slide {
-  padding: 6rem;
+  padding: 10rem;
   text-align: center;
   background: #fff;
   /* Center slide text vertically */
@@ -1150,6 +1144,10 @@ footer .copy strong {
     width: 100%;
     padding: 5rem;
   }
+  .Featured_Products .swiper-button-next,
+  .Featured_Products .swiper-button-prev {
+    display: none;
+  }
   .Review {
     display: block;
     text-align: center;
@@ -1341,5 +1339,9 @@ footer .copy strong {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+  }
+  .Adds .swiper-button-next,
+  .Adds .swiper-button-prev {
+    display: none;
   }
 }

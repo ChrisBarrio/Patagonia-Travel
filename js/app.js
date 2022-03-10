@@ -204,9 +204,9 @@ var swiper = new Swiper(".mySwiperAdds", {
     },
     // when window width is >= 640px
     811: {
-      slidesPerView: 3,
+      slidesPerView: 2,
       spaceBetween: 30,
-      slidesPerGroup: 3,
+      slidesPerGroup: 2,
     }
     
   } 
