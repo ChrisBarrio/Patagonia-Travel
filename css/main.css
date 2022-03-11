@@ -816,10 +816,16 @@ footer .listas div a {
 
 footer .listas div a i {
   padding-right: .5rem;
+  will-change: trasf;
+  -webkit-transition: -webkit-transform 500ms;
+  transition: -webkit-transform 500ms;
+  transition: transform 500ms;
+  transition: transform 500ms, -webkit-transform 500ms;
 }
 
 footer .listas div a i:hover {
-  padding-right: .7rem;
+  -webkit-transform: translateX(-0.7rem);
+          transform: translateX(-0.7rem);
 }
 
 footer .listas div a:hover {

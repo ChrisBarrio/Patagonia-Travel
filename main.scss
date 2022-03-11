@@ -705,9 +705,11 @@ footer{
                 font-size: var(--FontSize-m);
                 & i{
                     padding-right: .5rem;
+                    will-change: trasf;
+                    transition: transform 500ms;
                 }
                 & i:hover{
-                    padding-right: .7rem;
+                    transform: translateX(-.7rem);
                 }
             }
             & a:hover{
