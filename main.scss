@@ -37,15 +37,15 @@ html {
 }
 html::-webkit-scrollbar {
     width: 1rem;
-  }
-  
-  html::-webkit-scrollbar-track {
+}
+
+html::-webkit-scrollbar-track {
     background: #fff;
-  }
-  
-  html::-webkit-scrollbar-thumb {
+}
+
+html::-webkit-scrollbar-thumb {
     background: #10221b;
-  }
+}
 
 a{
     color: var(--black);
@@ -187,7 +187,7 @@ header{
 .swiper {
     width: 100%;
     height: 100%;
-  }
+}
 
 .swiper-slide {
     text-align: center;
@@ -210,11 +210,11 @@ header{
     
 }
 .swiper-slide.two{
-      justify-content: start;
-      & .content.two{
+    justify-content: start;
+    & .content.two{
         width: 50%;
         padding: 0 0 0 10rem;
-      }
+    }
 }
 
 .swiper-slide img {
@@ -245,12 +245,22 @@ header{
         & .Adventure__content{
             display: block;
             padding: 1rem 5rem;
+            margin: 2rem 0;
             justify-content: center;
             
             & img{
                 width: 20rem;
                 border-radius: 50%;
+                clip-path: circle(0.0% at 50% 50%);
+                animation: show-circle 2s 1s forwards;
             }
+
+            @keyframes show-circle {
+                to{
+                    clip-path: circle(50% at 50% 50%);
+                }
+            }
+
             & h3{
                 font-size: var(--FontSize-l);
                 color: var(--green);
@@ -280,7 +290,13 @@ header{
     & img{
         width: 50%;
         padding: 5rem;
-        clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+        clip-path: polygon(100% 0, 100% 0, 100% 0, 100% 100%);
+        animation: showImg 2s 4s forwards;
+    }
+    @keyframes showImg {
+        to{
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        }
     }
     & div{
         padding: 0 10rem;
@@ -301,7 +317,6 @@ header{
             padding: 1rem;
             
         }
-          
     }
 }
 
@@ -320,7 +335,7 @@ header{
         height: 100%;
         padding: 4rem 0;
 
-      }    
+    }    
     & .swiper-slide {
         text-align: center;
         font-size: 18px;
@@ -798,160 +813,10 @@ footer{
     
     
 }
-
-// --- iphone 
-
-@media (max-width: 376px){
-    html{
-        font-size: 45%;
-    }
-    
-    section{
-        padding: 0;
-    }
-    header{
-                opacity: 1;
-                & nav{
-                    top: 6rem; right: 100%;
-                    height: calc(100vh - 9.5rem);
-                    width: 100%;
-                    background-color:var(--white);
-                    position:absolute;
-                    transition: 2s;
-                    & ul{
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        width: 100%;
-                        & li{
-                            padding: 4rem;
-                                & a{
-                                    font-size: var(--FontSize-xl);
-                                }
-                            }
-                        }
-                    &.active{
-                        right: 0;
-                    }    
-                }
-                & .iconos{
-                    display: flex;
-                    & .btn-menu{
-                        display: flex;
-                    }
-                }
-            }
-    .home{
-            padding-top: 9rem;
-            & .content{
-                position: absolute;
-                width: 50%;
-                padding: 0 8rem 0 0;
-                & h2{
-                    font-size: 2.5rem;
-                    & strong{
-                        color:var(--green);
-                    }
-                }
-                & p, a {
-                    display: none;
-                }
-                
-        
-            }   
-    }
-    .Recomendation{
-        display: block;
-        & img{
-            width: 100%;
-            padding:1rem;
-            clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-        }
-        & div{
-            width: 100%;
-            padding: 5rem;
-    
-            }
-    }
-    .Offer{
-            padding: 2rem;
-            & .Offer__container{
-                padding:  0 3rem;
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                grid-gap: 3rem;
-                text-align: center;
-                    
-            }
-    }
-    .Blog{
-        display: block;
-        text-align: center;
-        & h2{
-            font-size:var(--h2);
-            padding: 3rem 0;
-        }
-        & .swiper {
-            width: 100%;
-            height: 100%;
-              
-            & .swiper-slide {
-                position: relative;
-                width: 30%;
-                height: 40rem;
-                padding: 2rem 5rem;
-                text-align: center;
-                font-size: 18px;
-                background: #fff;
-                /* Center slide text vertically */
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: -webkit-flex;
-                display: flex;
-                flex-direction: column;
-                text-align: center;
-                -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                -webkit-justify-content: center;
-                justify-content: space-around;
-                -webkit-box-align: center;
-                -ms-flex-align: center;
-                -webkit-align-items: center;
-                align-items: center;
-                & img{
-                    width: 100%;
-                    padding: 1rem;
-                }
-                & div{
-                    position: absolute;
-                    top: 30rem;
-                    background-color: var(--black);
-                    color: var(--white);
-                    padding: .5rem;
-                    border-radius: 1rem;
-                    & i{
-                        padding: 0 .3rem;
-                        font-size: var(--FontSize-m);
-                    } 
-                }
-                & h3{
-                    font-size: var(--FontSize-l);
-                    padding: 1rem;
-                    color: var(--green);
-                }
-                & p, a{
-                    display: none;
-                }
-                
-            }
-        }
-    }
-}
-
 // Galaxy samsung
-@media (max-width: 481px){
+@media (max-width: 420px){
     html{
-        font-size: 45%;
+        font-size: 50%;
     }
     
     section{
@@ -1221,5 +1086,154 @@ footer{
         .swiper-button-prev{
             display: none;
         }   
+    }
+}
+
+// --- iphone 
+
+@media (max-width: 376px){
+    html{
+        font-size: 45%;
+    }
+    
+    section{
+        padding: 0;
+    }
+    header{
+                opacity: 1;
+                & nav{
+                    top: 6rem; right: 100%;
+                    height: calc(100vh - 9.5rem);
+                    width: 100%;
+                    background-color:var(--white);
+                    position:absolute;
+                    transition: 2s;
+                    & ul{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        width: 100%;
+                        & li{
+                            padding: 4rem;
+                                & a{
+                                    font-size: var(--FontSize-xl);
+                                }
+                            }
+                        }
+                    &.active{
+                        right: 0;
+                    }    
+                }
+                & .iconos{
+                    display: flex;
+                    & .btn-menu{
+                        display: flex;
+                    }
+                }
+            }
+    .home{
+            padding-top: 9rem;
+            & .content{
+                position: absolute;
+                width: 50%;
+                padding: 0 8rem 0 0;
+                & h2{
+                    font-size: 2.5rem;
+                    & strong{
+                        color:var(--green);
+                    }
+                }
+                & p, a {
+                    display: none;
+                }
+                
+        
+            }   
+    }
+    .Recomendation{
+        display: block;
+        & img{
+            width: 100%;
+            padding:1rem;
+            clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+        }
+        & div{
+            width: 100%;
+            padding: 5rem;
+    
+            }
+    }
+    .Offer{
+            padding: 2rem;
+            & .Offer__container{
+                padding:  0 3rem;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                grid-gap: 3rem;
+                text-align: center;
+                    
+            }
+    }
+    .Blog{
+        display: block;
+        text-align: center;
+        & h2{
+            font-size:var(--h2);
+            padding: 3rem 0;
+        }
+        & .swiper {
+            width: 100%;
+            height: 100%;
+            
+            & .swiper-slide {
+                position: relative;
+                width: 30%;
+                height: 40rem;
+                padding: 2rem 5rem;
+                text-align: center;
+                font-size: 18px;
+                background: #fff;
+                /* Center slide text vertically */
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                justify-content: space-around;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                -webkit-align-items: center;
+                align-items: center;
+                & img{
+                    width: 100%;
+                    padding: 1rem;
+                }
+                & div{
+                    position: absolute;
+                    top: 30rem;
+                    background-color: var(--black);
+                    color: var(--white);
+                    padding: .5rem;
+                    border-radius: 1rem;
+                    & i{
+                        padding: 0 .3rem;
+                        font-size: var(--FontSize-m);
+                    } 
+                }
+                & h3{
+                    font-size: var(--FontSize-l);
+                    padding: 1rem;
+                    color: var(--green);
+                }
+                & p, a{
+                    display: none;
+                }
+                
+            }
+        }
     }
 }

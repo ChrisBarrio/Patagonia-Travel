@@ -274,6 +274,7 @@ header.active {
 .AdventureIdea div .Adventure__content {
   display: block;
   padding: 1rem 5rem;
+  margin: 2rem 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -282,6 +283,24 @@ header.active {
 .AdventureIdea div .Adventure__content img {
   width: 20rem;
   border-radius: 50%;
+  -webkit-clip-path: circle(0% at 50% 50%);
+          clip-path: circle(0% at 50% 50%);
+  -webkit-animation: show-circle 2s 1s forwards;
+          animation: show-circle 2s 1s forwards;
+}
+
+@-webkit-keyframes show-circle {
+  to {
+    -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+  }
+}
+
+@keyframes show-circle {
+  to {
+    -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+  }
 }
 
 .AdventureIdea div .Adventure__content h3 {
@@ -318,8 +337,24 @@ header.active {
 .Recomendation img {
   width: 50%;
   padding: 5rem;
-  -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-          clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  -webkit-clip-path: polygon(100% 0, 100% 0, 100% 0, 100% 100%);
+          clip-path: polygon(100% 0, 100% 0, 100% 0, 100% 100%);
+  -webkit-animation: showImg 2s 4s forwards;
+          animation: showImg 2s 4s forwards;
+}
+
+@-webkit-keyframes showImg {
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+@keyframes showImg {
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
 }
 
 .Recomendation div {
@@ -908,165 +943,9 @@ footer .copy strong {
   }
 }
 
-@media (max-width: 376px) {
+@media (max-width: 420px) {
   html {
-    font-size: 45%;
-  }
-  section {
-    padding: 0;
-  }
-  header {
-    opacity: 1;
-  }
-  header nav {
-    top: 6rem;
-    right: 100%;
-    height: calc(100vh - 9.5rem);
-    width: 100%;
-    background-color: var(--white);
-    position: absolute;
-    -webkit-transition: 2s;
-    transition: 2s;
-  }
-  header nav ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 100%;
-  }
-  header nav ul li {
-    padding: 4rem;
-  }
-  header nav ul li a {
-    font-size: var(--FontSize-xl);
-  }
-  header nav.active {
-    right: 0;
-  }
-  header .iconos {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  header .iconos .btn-menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .home {
-    padding-top: 9rem;
-  }
-  .home .content {
-    position: absolute;
-    width: 50%;
-    padding: 0 8rem 0 0;
-  }
-  .home .content h2 {
-    font-size: 2.5rem;
-  }
-  .home .content h2 strong {
-    color: var(--green);
-  }
-  .home .content p, .home .content a {
-    display: none;
-  }
-  .Recomendation {
-    display: block;
-  }
-  .Recomendation img {
-    width: 100%;
-    padding: 1rem;
-    -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-            clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-  }
-  .Recomendation div {
-    width: 100%;
-    padding: 5rem;
-  }
-  .Offer {
-    padding: 2rem;
-  }
-  .Offer .Offer__container {
-    padding: 0 3rem;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 3rem;
-    text-align: center;
-  }
-  .Blog {
-    display: block;
-    text-align: center;
-  }
-  .Blog h2 {
-    font-size: var(--h2);
-    padding: 3rem 0;
-  }
-  .Blog .swiper {
-    width: 100%;
-    height: 100%;
-  }
-  .Blog .swiper .swiper-slide {
-    position: relative;
-    width: 30%;
-    height: 40rem;
-    padding: 2rem 5rem;
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    text-align: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: space-around;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-  .Blog .swiper .swiper-slide img {
-    width: 100%;
-    padding: 1rem;
-  }
-  .Blog .swiper .swiper-slide div {
-    position: absolute;
-    top: 30rem;
-    background-color: var(--black);
-    color: var(--white);
-    padding: .5rem;
-    border-radius: 1rem;
-  }
-  .Blog .swiper .swiper-slide div i {
-    padding: 0 .3rem;
-    font-size: var(--FontSize-m);
-  }
-  .Blog .swiper .swiper-slide h3 {
-    font-size: var(--FontSize-l);
-    padding: 1rem;
-    color: var(--green);
-  }
-  .Blog .swiper .swiper-slide p, .Blog .swiper .swiper-slide a {
-    display: none;
-  }
-}
-
-@media (max-width: 481px) {
-  html {
-    font-size: 45%;
+    font-size: 50%;
   }
   section {
     padding: 0;
@@ -1348,6 +1227,162 @@ footer .copy strong {
   }
   .Adds .swiper-button-next,
   .Adds .swiper-button-prev {
+    display: none;
+  }
+}
+
+@media (max-width: 376px) {
+  html {
+    font-size: 45%;
+  }
+  section {
+    padding: 0;
+  }
+  header {
+    opacity: 1;
+  }
+  header nav {
+    top: 6rem;
+    right: 100%;
+    height: calc(100vh - 9.5rem);
+    width: 100%;
+    background-color: var(--white);
+    position: absolute;
+    -webkit-transition: 2s;
+    transition: 2s;
+  }
+  header nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  header nav ul li {
+    padding: 4rem;
+  }
+  header nav ul li a {
+    font-size: var(--FontSize-xl);
+  }
+  header nav.active {
+    right: 0;
+  }
+  header .iconos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header .iconos .btn-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .home {
+    padding-top: 9rem;
+  }
+  .home .content {
+    position: absolute;
+    width: 50%;
+    padding: 0 8rem 0 0;
+  }
+  .home .content h2 {
+    font-size: 2.5rem;
+  }
+  .home .content h2 strong {
+    color: var(--green);
+  }
+  .home .content p, .home .content a {
+    display: none;
+  }
+  .Recomendation {
+    display: block;
+  }
+  .Recomendation img {
+    width: 100%;
+    padding: 1rem;
+    -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+            clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  }
+  .Recomendation div {
+    width: 100%;
+    padding: 5rem;
+  }
+  .Offer {
+    padding: 2rem;
+  }
+  .Offer .Offer__container {
+    padding: 0 3rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 3rem;
+    text-align: center;
+  }
+  .Blog {
+    display: block;
+    text-align: center;
+  }
+  .Blog h2 {
+    font-size: var(--h2);
+    padding: 3rem 0;
+  }
+  .Blog .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  .Blog .swiper .swiper-slide {
+    position: relative;
+    width: 30%;
+    height: 40rem;
+    padding: 2rem 5rem;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .Blog .swiper .swiper-slide img {
+    width: 100%;
+    padding: 1rem;
+  }
+  .Blog .swiper .swiper-slide div {
+    position: absolute;
+    top: 30rem;
+    background-color: var(--black);
+    color: var(--white);
+    padding: .5rem;
+    border-radius: 1rem;
+  }
+  .Blog .swiper .swiper-slide div i {
+    padding: 0 .3rem;
+    font-size: var(--FontSize-m);
+  }
+  .Blog .swiper .swiper-slide h3 {
+    font-size: var(--FontSize-l);
+    padding: 1rem;
+    color: var(--green);
+  }
+  .Blog .swiper .swiper-slide p, .Blog .swiper .swiper-slide a {
     display: none;
   }
 }
